@@ -4,13 +4,20 @@ import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+  final GlobalKey _scaffoldKey = new GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       drawer: AppDrawer(),
       appBar: AppBar(
+        // leading: IconButton(
+        //   icon: Icon(Icons.menu),
+        //   onPressed: (){
+        //     // _scaffoldKey.currentState.openDrawer();
+          // },
+        // ),
         elevation: 0,
         // title: Text('Home'),
         backgroundColor: Hexcolor('#E7F3FF'),
@@ -53,13 +60,20 @@ class HomePage extends StatelessWidget {
                         alignment: Alignment.center,
                         height: 50,
                         width: 136,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [Hexcolor('#79B6FC'), Colors.white],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                stops: [0.3, 1.8])),
                         child: Text(
                           'Who we are',
                           style: TextStyle(
                             color: Colors.white,
+                            fontSize: 16,
                           ),
                         ),
-                        color: Hexcolor('#79B6FC'),
+                        // color: Hexcolor('#79B6FC'),
                       ),
                     ),
                     SizedBox(
@@ -91,9 +105,9 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 50),
-
                     Container(
-                      margin: EdgeInsets.only(left: 30),                      child: RaisedButton(
+                      margin: EdgeInsets.only(left: 30),
+                      child: RaisedButton(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             vertical: 18,
