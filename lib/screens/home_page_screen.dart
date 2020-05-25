@@ -38,43 +38,81 @@ class HomePage extends StatelessWidget {
                 height: 627,
                 color: Colors.white,
                 width: 500,
-                alignment: Alignment.topLeft,
+                // alignment: Alignment.topLeft,
                 child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.only(
-                        top: 40,
+                    SizedBox(height: 40),
+                    ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(32),
+                        bottomRight: Radius.circular(32),
                       ),
-                      height: 50,
-                      width: 136,
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 50,
+                        width: 136,
+                        child: Text(
+                          'Who we are',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        color: Hexcolor('#79B6FC'),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30.0),
                       child: Text(
-                        'Who we are',
+                        'Team CSI',
                         style: TextStyle(
-                          color: Colors.white,
+                          fontSize: 35,
                         ),
                       ),
-                      color: Hexcolor('#79B6FC'),
                     ),
-                    Text(
-                      'Team CSI',
-                      style: TextStyle(),
+                    SizedBox(
+                      height: 40,
                     ),
                     Container(
-                      padding: EdgeInsets.only(left: 30,),
-                      width: 320,
+                      margin: EdgeInsets.only(
+                        left: 30,
+                      ),
+                      width: 330,
                       child: Text(
                         'The COMPUTER SOCIETY OF INDIA (acronym as CSI) was formed in the year 1965. Since its inception, CSI has been paving the way for the IT industry to advance in the right direction. By indulging within itself most famous IT leaders, brilliant scientists and dedicated academicians.',
-                        style: TextStyle(),
-                        
+                        style: TextStyle(
+                          letterSpacing: 1.5,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
-                    RaisedButton(
-                      child: Text('Know More'),
-                      color: Hexcolor('#79B6FC'),
-                      onPressed: (){
-                        //...
-                      },
+                    SizedBox(height: 50),
+
+                    Container(
+                      margin: EdgeInsets.only(left: 30),                      child: RaisedButton(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 18,
+                            horizontal: 15,
+                          ),
+                          child: Text(
+                            'Know More',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        elevation: 5,
+                        color: Hexcolor('#79B6FC'),
+                        onPressed: () {
+                          //...
+                        },
+                      ),
                     ),
                   ],
                 ),
