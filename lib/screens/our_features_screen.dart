@@ -52,7 +52,6 @@ class OurFeatures extends StatelessWidget {
                           margin: EdgeInsets.only(
                             left: mediaQuery.size.height * 0.02,
                           ),
-                          // padding: EdgeInsets.all(30),
 
                           child: Text(
                             'Our',
@@ -70,7 +69,6 @@ class OurFeatures extends StatelessWidget {
                           margin: EdgeInsets.only(
                             left: mediaQuery.size.height * 0.02,
                           ),
-                          // padding: EdgeInsets.only(top: mediaQuery.size.height * 0.078,),
 
                           child: Text(
                             'Features',
