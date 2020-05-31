@@ -51,6 +51,7 @@ flutter:
     - assets/images/home_page_bg.png
     - assets/images/drawer bg.png
     - assets/images/our feature page bg.png
+    - assets/images/we create bg.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
