@@ -158,7 +158,7 @@ class OurFeatures extends StatelessWidget {
                                 'Create',
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 35
+                                  fontSize: 35,
                                 ),
                               ),
                             ),
