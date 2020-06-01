@@ -47,7 +47,7 @@ class AppDrawer extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      // Navigator.of(context).pushReplacementNamed('/');
+                       Navigator.pushNamed(context, 'home');
                     },
                   ),
                   ListTile(
@@ -63,7 +63,7 @@ class AppDrawer extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                      Navigator.pushNamed(context, 'our_features');
                     },
                   ),
                   ListTile(

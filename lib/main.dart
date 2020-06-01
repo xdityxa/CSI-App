@@ -15,7 +15,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         
       ),
-      home: OurFeatures(),
+      home: OurFeaturesScreen(),
+
+      initialRoute: 'home',
+      routes: {
+        'home': (context) => HomeScreen(),
+        'our_features': (context) => OurFeaturesScreen()
+      },
     );
   }
 }
