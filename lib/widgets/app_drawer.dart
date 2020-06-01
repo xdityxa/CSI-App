@@ -25,7 +25,7 @@ class AppDrawer extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  ListTile(
+                  ListTile(//cross icon
                     leading: Icon(
                       Icons.clear,
                       color: Hexcolor('#2D2871'),
@@ -34,7 +34,7 @@ class AppDrawer extends StatelessWidget {
                       Navigator.of(context).pop();
                     },
                   ),
-                  ListTile(
+                  ListTile(//home
                     leading: Icon(
                       Icons.home,
                       color: Hexcolor('#2D2871'),
@@ -50,7 +50,7 @@ class AppDrawer extends StatelessWidget {
                        Navigator.pushNamed(context, 'home');
                     },
                   ),
-                  ListTile(
+                  ListTile(//our features
                     leading: Icon(
                       Icons.group_work,
                       color: Hexcolor('#2D2871'),
@@ -66,7 +66,7 @@ class AppDrawer extends StatelessWidget {
                       Navigator.pushNamed(context, 'our_features');
                     },
                   ),
-                  ListTile(
+                  ListTile(//services
                     leading: Icon(
                       Icons.extension,
                       color: Hexcolor('#2D2871'),
@@ -89,7 +89,7 @@ class AppDrawer extends StatelessWidget {
                       onPressed: () {},
                     ),
                   ),
-                  ListTile(
+                  ListTile(//what we do
                     leading: Icon(
                       Icons.dns,
                       color: Hexcolor('#2D2871'),
@@ -112,7 +112,7 @@ class AppDrawer extends StatelessWidget {
                       onPressed: () {},
                     ),
                   ),
-                  ListTile(
+                  ListTile(//our team
                     leading: Icon(
                       Icons.group,
                       color: Hexcolor('#2D2871'),
@@ -125,7 +125,7 @@ class AppDrawer extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                      Navigator.pushNamed(context, 'second_year');
                     },
                     trailing: IconButton(
                       icon: Icon(
@@ -135,7 +135,7 @@ class AppDrawer extends StatelessWidget {
                       onPressed: () {},
                     ),
                   ),
-                  ListTile(
+                  ListTile(//join us
                     leading: Icon(
                       Icons.queue,
                       color: Hexcolor('#2D2871'),
@@ -151,7 +151,7 @@ class AppDrawer extends StatelessWidget {
                       // Navigator.of(context).pushReplacementNamed(Screen.routeName);
                     },
                   ),
-                  ListTile(
+                  ListTile(//contact us
                     leading: Icon(
                       Icons.live_help,
                       color: Hexcolor('#2D2871'),
@@ -167,7 +167,7 @@ class AppDrawer extends StatelessWidget {
                       // Navigator.of(context).pushReplacementNamed(Screen.routeName);
                     },
                   ),
-                  ListTile(
+                  ListTile(//about us
                     leading: Icon(
                       Icons.info,
                       color: Hexcolor('#2D2871'),
@@ -183,7 +183,7 @@ class AppDrawer extends StatelessWidget {
                       // Navigator.of(context).pushReplacementNamed(Screen.routeName);
                     },
                   ),
-                  Container(
+                  Container(//website
                     margin: EdgeInsets.only(top: mediaQuery.size.height * 0.30),
                     padding: EdgeInsets.symmetric(vertical: 15),
                     child: ListTile(
