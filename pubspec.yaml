@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   hexcolor: ^1.0.2
-  # flutter_svg: ^0.17.4
+  flutter_svg: ^0.17.4
   # material_design_icons_flutter: ^3.2.3895
 
   # The following adds the Cupertino Icons font to your application.
@@ -34,7 +34,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  # url_launcher: ^5.4.10
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -52,6 +52,49 @@ flutter:
     - assets/images/drawer bg.png
     - assets/images/our feature page bg.png
     - assets/images/we create bg.png
+    - assets/images/our team bg.png
+    - assets/images/secondYear/aayush.jpg
+    - assets/images/secondYear/abhishek.jpg
+    - assets/images/secondYear/aditya.jpg
+    - assets/images/secondYear/akhilesh.jpg
+    - assets/images/secondYear/Anchal.jpg
+    - assets/images/secondYear/anshika.jpg
+    - assets/images/secondYear/arnav.jpg
+    - assets/images/secondYear/ayushporwal3843.jpg
+    - assets/images/secondYear/Harsh.jpg
+    - assets/images/secondYear/ishika.jpg
+    - assets/images/secondYear/shivam.JPG
+    - assets/images/secondYear/sonakshi.jpg
+    - assets/images/secondYear/vikalp.jpg
+    - assets/images/secondYear/vikas.jpg
+    - assets/images/thirdYear/abhishek.jpg
+    - assets/images/thirdYear/rathi.jpg
+    - assets/images/thirdYear/bhawana.jpg
+    - assets/images/thirdYear/gaurav.jpg
+    - assets/images/thirdYear/harsh.jpg
+    - assets/images/thirdYear/pramod.jpg
+    - assets/images/thirdYear/priyam.jpg
+    - assets/images/thirdYear/saumya.jpg
+    - assets/images/thirdYear/siddhartha.jpg
+    - assets/images/thirdYear/subhanshu.jpg
+    - assets/images/thirdYear/ujjawal.jpg
+    - assets/images/fourthYear/saxena.jpeg
+    - assets/images/fourthYear/aadi.jpeg
+    - assets/images/fourthYear/aanchal.jpeg
+    - assets/images/fourthYear/alok.jpeg
+    - assets/images/fourthYear/amit.jpeg
+    - assets/images/fourthYear/ankish.jpeg
+    - assets/images/fourthYear/muskan.jpeg
+    - assets/images/fourthYear/pragati.jpeg
+    - assets/images/fourthYear/shashwat.jpeg
+    - assets/images/fourthYear/vats.jpeg
+    - assets/images/fourthYear/shubh.jpeg
+    - assets/images/fourthYear/sonali.jpeg
+    - assets/images/fourthYear/yashvi.jpeg
+    - assets/images/fourthYear/yashvi.jpeg
+    - assets/icons/menu.svg
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -77,6 +120,9 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Light.ttf
+    - family: Cardicons
+      fonts:
+        - asset: assets/fonts/Cardicons.ttf    
     #     - asset: fonts/TrajanPro_Bold.ttf
     #       weight: 700
   #

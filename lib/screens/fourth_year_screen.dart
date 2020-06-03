@@ -4,9 +4,10 @@ import 'package:hexcolor/hexcolor.dart';
 
 import '../widgets/app_drawer.dart';
 import '../widgets/individual.dart';
-import '../widgets/second_year_data.dart';
+import '../widgets/fourth_year_data.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class SecondYearScreen extends StatelessWidget {
+class FourthYearScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -19,7 +20,7 @@ class SecondYearScreen extends StatelessWidget {
       key: _scaffoldKey,
       drawer: AppDrawer(),
       body: SafeArea(
-              child: Column(
+        child: Column(
           children: <Widget>[
             Flexible(
               fit: FlexFit.loose,
@@ -42,7 +43,13 @@ class SecondYearScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 10),
                       child: IconButton(
-                        icon: Icon(Icons.menu),
+                        // iconSize: 10,
+                        icon: SvgPicture.asset(
+                          'assets/icons/menu.svg',
+                          height: 20,
+                          width: 20,
+                          color: Colors.black,
+                        ),
                         onPressed: () => _scaffoldKey.currentState.openDrawer(),
                       ),
                     ),
@@ -53,12 +60,9 @@ class SecondYearScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Container(
-                            // color: Colors.red,
-
                             margin: EdgeInsets.only(
                               left: mediaQuery.size.height * 0.02,
                             ),
-
                             child: Text(
                               'Our',
                               style: TextStyle(
@@ -134,7 +138,7 @@ class SecondYearScreen extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Second Year',
+                            'Fourth Year',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -153,9 +157,9 @@ class SecondYearScreen extends StatelessWidget {
                           maxCrossAxisExtent: 300,
                           crossAxisSpacing: 30,
                           mainAxisSpacing: 30,
-                          childAspectRatio: 156/190,
+                          childAspectRatio: 156 / 190,
                         ),
-                        children: secondYearData
+                        children: fourthYearData
                             .map(
                               (indData) => Individual(
                                 indData.name,

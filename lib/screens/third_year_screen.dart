@@ -4,9 +4,9 @@ import 'package:hexcolor/hexcolor.dart';
 
 import '../widgets/app_drawer.dart';
 import '../widgets/individual.dart';
-import '../widgets/second_year_data.dart';
+import '../widgets/third_year_data.dart';
 
-class SecondYearScreen extends StatelessWidget {
+class ThirdYearScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -134,7 +134,7 @@ class SecondYearScreen extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Second Year',
+                            'Third Year',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -155,7 +155,7 @@ class SecondYearScreen extends StatelessWidget {
                           mainAxisSpacing: 30,
                           childAspectRatio: 156/190,
                         ),
-                        children: secondYearData
+                        children: thirdYearData
                             .map(
                               (indData) => Individual(
                                 indData.name,
