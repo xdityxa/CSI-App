@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home: ContactUs(),
 
-      // initialRoute: 'home',
+      initialRoute: 'home',
       routes: {
         'home': (context) => HomeScreen(),
         'our_features': (context) => OurFeaturesScreen(),
