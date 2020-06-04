@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class OurFeatures extends StatelessWidget {
+class OurFeaturesScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -26,7 +27,7 @@ class OurFeatures extends StatelessWidget {
                 color: Hexcolor('#E7F3FF'),
                 image: DecorationImage(
                   image: AssetImage('assets/images/our feature page bg.png'),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.contain,
                 ),
               ),
               child: Column(
@@ -36,7 +37,12 @@ class OurFeatures extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: 10),
                     child: IconButton(
-                      icon: Icon(Icons.menu),
+                        icon: SvgPicture.asset(
+                          'assets/icons/menu.svg',
+                          height: 18,
+                          width: 18,
+                          // color: Colors.black,
+                        ),
                       onPressed: () => _scaffoldKey.currentState.openDrawer(),
                     ),
                   ),
@@ -91,7 +97,7 @@ class OurFeatures extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(
                 top: mediaQuery.size.height * 0.05,
-                bottom: mediaQuery.size.height * 0.095,
+                bottom: mediaQuery.size.height * 0.069,
               ),
               width: double.infinity,
               decoration: BoxDecoration(
@@ -105,7 +111,6 @@ class OurFeatures extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.04),
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(32),
@@ -135,35 +140,233 @@ class OurFeatures extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Row(
-                    children: <Widget>[
-                      Card(
-                        color: Hexcolor('#E7F3FF'),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                              child: Text(
-                                'We',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 35
-                                ), 
-                              ), 
-                            ),
-                            Container(
-                              child: Text(
-                                'Create',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 35
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          height: 371,
+                          width: 285,
+                          decoration: BoxDecoration(
+                            color: Hexcolor('#E7F3FF'),
+                            borderRadius: BorderRadius.circular(32),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 16,
+                                // spreadRadius: 5,
+                                offset: Offset(
+                                  10,
+                                  10,
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          margin: EdgeInsets.only(
+                            top: 100,
+                            left: 30,
+                            bottom: 50,
+                          ),
+                          padding: EdgeInsets.only(
+                            top: 17,
+                            left: 23,
+                            right: 21,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                child: Text(
+                                  'We',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 35,
+                                    fontFamily: 'Poppins',
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  'Create',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 35,
+                                      fontFamily: 'Poppins',
+                                      height: 1),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 26),
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/we create bg.png'),
+                                  ),
+                                ),
+                                child: Text(
+                                  'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    letterSpacing: 1.6,
+                                    height: 1.4,
+                                    fontFamily: 'Roboto',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                        Container(
+                          height: 371,
+                          width: 285,
+                          decoration: BoxDecoration(
+                            color: Hexcolor('#E7F3FF'),
+                            borderRadius: BorderRadius.circular(32),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 16,
+                                // spreadRadius: 5,
+                                offset: Offset(
+                                  10,
+                                  10,
+                                ),
+                              ),
+                            ],
+                          ),
+                          margin: EdgeInsets.only(
+                            top: 51,
+                            left: 30,
+                            // right: 21,
+                          ),
+                          padding: EdgeInsets.only(
+                            top: 17,
+                            left: 23,
+                            right: 21,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                child: Text(
+                                  'We',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 35,
+                                    fontFamily: 'Poppins',
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  'Share',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 35,
+                                      fontFamily: 'Poppins',
+                                      height: 1),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 26),
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/we create bg.png'),
+                                  ),
+                                ),
+                                child: Text(
+                                  'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    letterSpacing: 1.6,
+                                    height: 1.4,
+                                    fontFamily: 'Roboto',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 371,
+                          width: 285,
+                          decoration: BoxDecoration(
+                            color: Hexcolor('#E7F3FF'),
+                            borderRadius: BorderRadius.circular(32),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 16,
+                                // spreadRadius: 5,
+                                offset: Offset(
+                                  10,
+                                  10,
+                                ),
+                              ),
+                            ],
+                          ),
+                          margin: EdgeInsets.only(
+                            top: 51,
+                            left: 30,
+                            right: 30
+                            // right: 21,
+                          ),
+                          padding: EdgeInsets.only(
+                            top: 17,
+                            left: 23,
+                            right: 21,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Container(
+                                child: Text(
+                                  'We',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 35,
+                                    fontFamily: 'Poppins',
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                child: Text(
+                                  'Innovate',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 35,
+                                    fontFamily: 'Poppins',
+                                    height: 1,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 26),
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/we create bg.png'),
+                                  ),
+                                ),
+                                child: Text(
+                                  'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    letterSpacing: 1.6,
+                                    height: 1.4,
+                                    fontFamily: 'Roboto',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
