@@ -48,7 +48,7 @@ class FourthYearScreen extends StatelessWidget {
                           'assets/icons/menu.svg',
                           height: 20,
                           width: 20,
-                          color: Colors.black,
+                          // color: Colors.black,
                         ),
                         onPressed: () => _scaffoldKey.currentState.openDrawer(),
                       ),

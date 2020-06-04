@@ -5,6 +5,8 @@ import './screens/our_features_screen.dart';
 import './screens/second_year_screen.dart';
 import './screens/third_year_screen.dart';
 import './screens/fourth_year_screen.dart';
+import './screens/contact_us_screen.dart';
+
 
 
 
@@ -20,14 +22,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         
       ),
-      home: FourthYearScreen(),
+      home: ContactUs(),
 
       // initialRoute: 'home',
-      // routes: {
-      //   'home': (context) => HomeScreen(),
-      //   'our_features': (context) => OurFeaturesScreen(),
-      //   'second_year': (context) => SecondYearScreen(),
-      // },
+      routes: {
+        'home': (context) => HomeScreen(),
+        'our_features': (context) => OurFeaturesScreen(),
+        'second_year': (context) => SecondYearScreen(),
+      },
     );
   }
 }

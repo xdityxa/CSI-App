@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/app_drawer.dart';
 import '../widgets/individual.dart';
@@ -42,7 +43,12 @@ class ThirdYearScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 10),
                       child: IconButton(
-                        icon: Icon(Icons.menu),
+                        icon: SvgPicture.asset(
+                          'assets/icons/menu.svg',
+                          height: 18,
+                          width: 18,
+                          // color: Colors.black,
+                        ),
                         onPressed: () => _scaffoldKey.currentState.openDrawer(),
                       ),
                     ),
