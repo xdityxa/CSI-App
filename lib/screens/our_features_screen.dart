@@ -226,7 +226,7 @@ class OurFeaturesScreen extends StatelessWidget {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.black26,
-                                blurRadius: 16,
+                                blurRadius: 10,
                                 // spreadRadius: 5,
                                 offset: Offset(
                                   10,
