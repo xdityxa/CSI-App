@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:csi_app/card_icons_icons.dart';
+
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Individual extends StatelessWidget {
   final String name;
@@ -18,7 +19,6 @@ class Individual extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
     return InkWell(
         child: Stack(
           children: <Widget>[
@@ -75,10 +75,7 @@ class Individual extends StatelessWidget {
                           minWidth: 20,
                           minHeight: 20,
                         ),
-                        icon: Icon(
-                          Cardicons.facebook_1,
-                          color: Colors.white,
-                        ),
+                        icon: SvgPicture.asset('assets/icons/facebook.svg', color: Colors.white),
                         onPressed: () {},
                       ),
                       IconButton(
@@ -87,10 +84,7 @@ class Individual extends StatelessWidget {
                           minWidth: 20,
                           minHeight: 20,
                         ),
-                        icon: Icon(
-                          Cardicons.github_sign,
-                          color: Colors.white,
-                        ),
+                        icon: SvgPicture.asset('assets/icons/github-image.svg', color: Colors.white),
                         onPressed: () {},
                       ),
                       IconButton(
@@ -99,10 +93,7 @@ class Individual extends StatelessWidget {
                           minWidth: 20,
                           minHeight: 20,
                         ),
-                        icon: Icon(
-                          Cardicons.linkedin,
-                          color: Colors.white,
-                        ),
+                        icon: SvgPicture.asset('assets/icons/linkedin.svg', color: Colors.white),
                         onPressed: () {},
                       ),
                     ],
