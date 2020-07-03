@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   hexcolor: ^1.0.2
   flutter_svg: ^0.17.4
+  google_fonts: ^1.1.0
   # material_design_icons_flutter: ^3.2.3895
 
   # The following adds the Cupertino Icons font to your application.
@@ -118,8 +119,10 @@ flutter:
         - asset: assets/fonts/Poppins-Regular.ttf
         - asset: assets/fonts/Poppins-Medium.ttf
           weight: 500
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
         - asset: assets/fonts/Poppins-SemiBold.ttf
-          weight: 600
+          weight: 400
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700
     - family: Roboto
@@ -127,7 +130,12 @@ flutter:
         - asset: assets/fonts/Roboto-Light.ttf
     - family: Roboto-Regular
       fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf    
+        - asset: assets/fonts/Roboto-Regular.ttf
+    - family: PlayfairDisplay
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+        - asset: assets/fonts/PlayfairDisplay-Medium.ttf
+          weight: 500     
     #     - asset: fonts/TrajanPro_Bold.ttf
     #       weight: 700
   #

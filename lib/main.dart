@@ -29,6 +29,8 @@ class MyApp extends StatelessWidget {
         'home': (context) => HomeScreen(),
         'our_features': (context) => OurFeaturesScreen(),
         'second_year': (context) => SecondYearScreen(),
+        'third_year': (context) => ThirdYearScreen(),
+        'fourth_year': (context) => FourthYearScreen(),
       },
     );
   }

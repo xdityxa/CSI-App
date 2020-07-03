@@ -2,9 +2,95 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OurFeaturesScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  Widget _cards(String title1, String title2, String para) {
+    return Container(
+      height: 371,
+      width: 285,
+      decoration: BoxDecoration(
+        color: Hexcolor('#E7F3FF'),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10,
+            // spreadRadius: 5,
+            offset: Offset(
+              8,
+              8,
+            ),
+          ),
+        ],
+      ),
+      margin: EdgeInsets.only(
+        top: 100,
+        left: 30,
+        bottom: 50,
+      ),
+      padding: EdgeInsets.only(
+        top: 17,
+        left: 23,
+        right: 5,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            child: Text(
+              title1,
+              style: GoogleFonts.poppins(
+                color: Colors.black,
+                fontSize: 35,
+                height: 1,
+                fontWeight: FontWeight.w500
+              ),
+              // style: TextStyle(
+              //   color: Colors.black,
+              //   fontSize: 35,
+              //   fontFamily: 'PlayfairDisplay',
+              //   fontWeight: FontWeight.w500,
+
+              // ),
+            ),
+          ),
+          Container(
+            child: Text(
+              title2,
+              style: GoogleFonts.poppins(
+                color: Colors.black,
+                fontSize: 35,
+                fontWeight: FontWeight.w500
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 26),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/we create bg.png'),
+              ),
+            ),
+            child: Text(
+              para,
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.6),
+                fontSize: 16,
+                letterSpacing: 1.6,
+                height: 1.4,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +123,12 @@ class OurFeaturesScreen extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: 10),
                     child: IconButton(
-                        icon: SvgPicture.asset(
-                          'assets/icons/menu.svg',
-                          height: 18,
-                          width: 18,
-                          // color: Colors.black,
-                        ),
+                      icon: SvgPicture.asset(
+                        'assets/icons/menu.svg',
+                        height: 18,
+                        width: 18,
+                        // color: Colors.black,
+                      ),
                       onPressed: () => _scaffoldKey.currentState.openDrawer(),
                     ),
                   ),
@@ -121,14 +207,15 @@ class OurFeaturesScreen extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         height: 50,
                         width: 120,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [Hexcolor('#79B6FC'), Colors.white],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            stops: [0.5, 1.8],
-                          ),
-                        ),
+                        color: Hexcolor('#79B6FC'),
+                        // decoration: BoxDecoration(
+                        //   gradient: LinearGradient(
+                        //     colors: [Hexcolor('#79B6FC'), Colors.white],
+                        //     begin: Alignment.topLeft,
+                        //     end: Alignment.bottomRight,
+                        //     stops: [0.5, 1.8],
+                        //   ),
+                        // ),
                         child: Text(
                           'Features',
                           style: TextStyle(
@@ -144,227 +231,9 @@ class OurFeaturesScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: <Widget>[
-                        Container(
-                          height: 371,
-                          width: 285,
-                          decoration: BoxDecoration(
-                            color: Hexcolor('#E7F3FF'),
-                            borderRadius: BorderRadius.circular(32),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 16,
-                                // spreadRadius: 5,
-                                offset: Offset(
-                                  10,
-                                  10,
-                                ),
-                              ),
-                            ],
-                          ),
-                          margin: EdgeInsets.only(
-                            top: 100,
-                            left: 30,
-                            bottom: 50,
-                          ),
-                          padding: EdgeInsets.only(
-                            top: 17,
-                            left: 23,
-                            right: 21,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Container(
-                                child: Text(
-                                  'We',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 35,
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  'Create',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 35,
-                                      fontFamily: 'Poppins',
-                                      height: 1),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 26),
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/we create bg.png'),
-                                  ),
-                                ),
-                                child: Text(
-                                  'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    letterSpacing: 1.6,
-                                    height: 1.4,
-                                    fontFamily: 'Roboto',
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: 371,
-                          width: 285,
-                          decoration: BoxDecoration(
-                            color: Hexcolor('#E7F3FF'),
-                            borderRadius: BorderRadius.circular(32),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 10,
-                                // spreadRadius: 5,
-                                offset: Offset(
-                                  10,
-                                  10,
-                                ),
-                              ),
-                            ],
-                          ),
-                          margin: EdgeInsets.only(
-                            top: 51,
-                            left: 30,
-                            // right: 21,
-                          ),
-                          padding: EdgeInsets.only(
-                            top: 17,
-                            left: 23,
-                            right: 21,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Container(
-                                child: Text(
-                                  'We',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 35,
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  'Share',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 35,
-                                      fontFamily: 'Poppins',
-                                      height: 1),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 26),
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/we create bg.png'),
-                                  ),
-                                ),
-                                child: Text(
-                                  'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    letterSpacing: 1.6,
-                                    height: 1.4,
-                                    fontFamily: 'Roboto',
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: 371,
-                          width: 285,
-                          decoration: BoxDecoration(
-                            color: Hexcolor('#E7F3FF'),
-                            borderRadius: BorderRadius.circular(32),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black26,
-                                blurRadius: 16,
-                                // spreadRadius: 5,
-                                offset: Offset(
-                                  10,
-                                  10,
-                                ),
-                              ),
-                            ],
-                          ),
-                          margin: EdgeInsets.only(
-                            top: 51,
-                            left: 30,
-                            right: 30
-                            // right: 21,
-                          ),
-                          padding: EdgeInsets.only(
-                            top: 17,
-                            left: 23,
-                            right: 21,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Container(
-                                child: Text(
-                                  'We',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 35,
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  'Innovate',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 35,
-                                    fontFamily: 'Poppins',
-                                    height: 1,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(top: 26),
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/we create bg.png'),
-                                  ),
-                                ),
-                                child: Text(
-                                  'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    letterSpacing: 1.6,
-                                    height: 1.4,
-                                    fontFamily: 'Roboto',
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        _cards('We', 'Create', 'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.'),
+                        _cards('We', 'Share', 'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.'),
+                        _cards('We', 'Innovate', 'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.'),
                       ],
                     ),
                   )

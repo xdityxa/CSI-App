@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Hexcolor('#E7F3FF'),
       key: _scaffoldKey,
-      drawer: AppDrawer(      ),
+      drawer: AppDrawer(),
       // appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
